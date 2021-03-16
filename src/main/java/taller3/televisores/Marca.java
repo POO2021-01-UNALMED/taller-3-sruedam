@@ -5,13 +5,13 @@ public class Marca {
 	
 	// Constructor
 	
-	Marca(String nombre) {
+	public Marca(String nombre) {
 		this.nombre = nombre;
 	}
-	void setNombre (String nuevoNombre) {
+	public void setNombre (String nuevoNombre) {
 		this.nombre = nuevoNombre;
 	}
-	String getNombre () {
+	public String getNombre () {
 		return this.nombre;
 	}
 }

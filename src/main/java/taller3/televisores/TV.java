@@ -7,11 +7,11 @@ public class TV {
 	boolean estado;
 	int volumen;
 	Control control;
-	static int numTV = 0;
+	public static int numTV = 0;
 	
 	// Constructor
 	
-	TV (Marca marca, boolean estado) {
+	public TV (Marca marca, boolean estado) {
 		this.marca = marca;
 		this.estado = estado;
 		this.canal = 1;
@@ -22,74 +22,78 @@ public class TV {
 	
 	// Métodos set y get de los atributos
 	
-	void setMarca (Marca nuevaMarca) {
+	public void setMarca (Marca nuevaMarca) {
 		this.marca = nuevaMarca;
 	}
-	Marca getMarca () {
+	public Marca getMarca () {
 		return this.marca;
 	}
 	
-	void setControl (Control nuevoControl) {
+	public void setControl (Control nuevoControl) {
 		this.control = nuevoControl;
 	}
-	Control getControl () {
+	public Control getControl () {
 		return this.control;
 	}
 	
-	void setPrecio (int nuevoPrecio) {
+	public void setPrecio (int nuevoPrecio) {
 		this.precio = nuevoPrecio;
 	}
-	int getPrecio () {
+	public int getPrecio () {
 		return this.precio;
 	}
 	
-	void setVolumen (int nuevoVolumen) {
+	public void setVolumen (int nuevoVolumen) {
 		if (nuevoVolumen >= 0 && nuevoVolumen <= 7) {
 			this.volumen = nuevoVolumen;
 		}
 	}
-	int getVolumen () {
+	public int getVolumen () {
 		return this.volumen;
 	}
 	
-	void setCanal (int nuevoCanal) {
+	public void setCanal (int nuevoCanal) {
 		if (nuevoCanal >= 1 && nuevoCanal <= 120) {
 			this.canal = nuevoCanal;
 		}
 	}
-	int getCanal () {
+	public int getCanal () {
 		return this.canal;
 	}
 	
 	// Obtener la cantidad de televisores fabricados
 	
-	static int getNumTV () {
+	public static void setNumTV (int nuevaCantidad) {
+		TV.numTV = nuevaCantidad;
+	}
+	
+	public static int getNumTV () {
 		return TV.numTV;
 	}
 	
 	// Prendido y apagado
 	
-	void turnOn () {
+	public void turnOn () {
 		this.estado = true;
 	}
-	void turnOff () {
+	public void turnOff () {
 		this.estado = false;
 	}
 	
 	// Consultar estado
 	
-	boolean getEstado () {
+	public boolean getEstado () {
 		return this.estado;
 	}
 	
 	// Aumnetar y disminuir canal
 	
-	void canalUp () {
+	public void canalUp () {
 		if (this.canal != 120 && this.estado == true) {
 			this.canal ++;
 		}
 	}
-	void canalDown () {
+	public void canalDown () {
 		if(this.canal != 1 && this.estado == true) {
 			this.canal --;
 		}
@@ -97,12 +101,12 @@ public class TV {
 	
 	// Aumentar y disminuir volumen
 	
-	void volumenUp () {
+	public void volumenUp () {
 		if (this.volumen != 7 && this.estado == true) {
 			this.volumen ++;
 		}
 	}
-	void volumenDown () {
+	public void volumenDown () {
 		if(this.volumen != 0 && this.estado == true) {
 			this.volumen --;
 		}

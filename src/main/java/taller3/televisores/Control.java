@@ -5,50 +5,50 @@ public class Control {
 	
 	// Métodos set y get para tv
 	
-	void setTV (TV nuevoTV) {
+	public void setTV (TV nuevoTV) {
 		this.tv = nuevoTV;
 	}
-	TV getTV () {
+	public TV getTv () {
 		return this.tv;
 	}
 	
 	// Método enlazar
 	
-	void enlazar (TV EnlaceTV) {
+	public void enlazar (TV EnlaceTV) {
 		this.tv = EnlaceTV;
 		EnlaceTV.control = this;
 	}
 	
 	// Prender y apagar el TV
 	
-	void turnOn () {
+	public void turnOn () {
 		this.tv.turnOn();
 	}
-	void turnOff () {
+	public void turnOff () {
 		this.tv.turnOff();
 	}
 	
 	// Aumentar y bajar canal
 	
-	void canalUp () {
+	public void canalUp () {
 		this.tv.canalUp();
 	}
-	void canalDown () {
+	public void canalDown () {
 		this.tv.canalDown();
 	}
 	
 	// Aumentar y bajar volumen
 	
-	void volumenUp () {
+	public void volumenUp () {
 		this.tv.volumenUp();
 	}
-	void volumenDown () {
+	public void volumenDown () {
 		this.tv.volumenDown();
 	}
 	
 	// Poner canal desde el control
 	
-	void setCanal (int ControlCanal) {
+	public void setCanal (int ControlCanal) {
 		this.tv.setCanal(ControlCanal);
 	}
 }
