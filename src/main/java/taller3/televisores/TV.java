@@ -44,7 +44,7 @@ public class TV {
 	}
 	
 	public void setVolumen (int nuevoVolumen) {
-		if (nuevoVolumen >= 0 && nuevoVolumen <= 7) {
+		if (nuevoVolumen >= 0 && nuevoVolumen <= 7 && this.estado == true) {
 			this.volumen = nuevoVolumen;
 		}
 	}
@@ -89,7 +89,7 @@ public class TV {
 	// Aumnetar y disminuir canal
 	
 	public void canalUp () {
-		if (this.canal <= 120 && this.estado == true) {
+		if (this.canal != 120 && this.estado == true) {
 			this.canal ++;
 		}
 	}
@@ -102,7 +102,7 @@ public class TV {
 	// Aumentar y disminuir volumen
 	
 	public void volumenUp () {
-		if (this.volumen <= 7 && this.estado == true) {
+		if (this.volumen != 7 && this.estado == true) {
 			this.volumen ++;
 		}
 	}
